@@ -2,18 +2,19 @@ class FullTextsController < ApplicationController
   before_action :set_full_text, only: [:show, :edit, :update, :destroy]
 
   def index
-    @full_texts = Full_text.all
+    @full_texts = FullText.all
   end
 
   def show
   end
 
   def new
-    @full_text = Full_text.new
+    @full_text = FullText.new
   end
 
   def create
-    @full_text = Full_text.new(full_text_params)
+    @full_text = FullText.new(full_text_params)
+    @full_text.generate_paragraphs(params[:other][:content])
     @full_text.user = current_user
     if full_text.save
       redirect_to full_text_path(@full_text)
@@ -41,11 +42,11 @@ class FullTextsController < ApplicationController
   private
 
   def set_full_text
-    @full_text = Full_text.find(params[:id])
+    @full_text = FullText.find(params[:id])
   end
 
   def full_text_params
     params.require(:full_text).permit(:title, :percentage)
-
+  end
 
 end
