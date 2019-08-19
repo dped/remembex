@@ -1,0 +1,15 @@
+<div class="create_full_text_form">
+  <%= simple_form_for @full_text do |f| %>
+    <div class="form-inputs">
+      <%= f.input :title %>
+      <%= simple_fields_for :other do |o| %>
+        <%= o.input :content, as: :text, label: 'Content' %>
+      <% end %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit, "Create text", class: "create_text_button" %>
+    </div>
+  <% end %>
+</div>
+

@@ -2,7 +2,7 @@ class TextParagraphsController < ApplicationController
   before_action :set_text_paragraph, only: :show
 
   def index
-    @text_paragraphs = Text_paragraph.all
+    @text_paragraphs = TextParagraph.all
   end
 
   def show
@@ -17,6 +17,6 @@ class TextParagraphsController < ApplicationController
   end
 
   def set_text_paragraph
-    @text_paragraph = Text_paragraph.find(params[:id])
+    @text_paragraph = TextParagraph.find(params[:id])
   end
 end

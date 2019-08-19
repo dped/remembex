@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2019_08_19_101605) do
     t.bigint "full_text_id"
     t.text "content"
     t.integer "order_number"
-    t.boolean "done"
+    t.boolean "done", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["full_text_id"], name: "index_text_paragraphs_on_full_text_id"
