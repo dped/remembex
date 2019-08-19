@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2019_08_19_101605) do
 
   create_table "full_texts", force: :cascade do |t|
     t.string "title"
-    t.integer "percentage"
+    t.integer "percentage", default: 0
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

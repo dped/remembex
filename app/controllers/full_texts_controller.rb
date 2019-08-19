@@ -14,9 +14,10 @@ class FullTextsController < ApplicationController
 
   def create
     @full_text = FullText.new(full_text_params)
-    @full_text.generate_paragraphs(params[:other][:content])
     @full_text.user = current_user
-    if full_text.save
+    @full_text.generate_paragraphs(params[:other][:content])
+    @full_text.percentage = 0
+    if @full_text.save
       redirect_to full_text_path(@full_text)
     else
       render :new
