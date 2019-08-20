@@ -1,6 +1,7 @@
 TextParagraph.destroy_all
 User.destroy_all
 FullText.destroy_all
+Game.destroy_all
 
 abraham_lincoln = User.new(username: "abraham Lincoln",
   email: "abraham@gmail.com",
@@ -15,6 +16,8 @@ But, in a larger sense, we can not dedicate -- we can not consecrate -- we can n
 gettysburg = FullText.new(title: "Gettysburg Address",
   user: abraham_lincoln
 )
+
+Game.create(name: "insert_word_game")
 
 gettysburg.generate_paragraphs(speech)
 gettysburg.save
