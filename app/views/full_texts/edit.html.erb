@@ -1,12 +1,16 @@
+<div class="edit_and_new_background_image_container">
 <div class="create_full_text_form">
   <%= simple_form_for @full_text do |f| %>
     <div class="form-inputs">
       <%= f.input :title %>
-      <%= f.input :content %>
+      <%= simple_fields_for :other do |o| %>
+        <%= o.input :content, as: :text, label: 'Content', input_html: { value: @full_text.text_paragraphs.map(&:content).join("\n") } %>
+      <% end %>
     </div>
 
     <div class="form-actions">
       <%= f.button :submit, "Edit text", class: "create_text_button" %>
     </div>
   <% end %>
+</div>
 </div>
