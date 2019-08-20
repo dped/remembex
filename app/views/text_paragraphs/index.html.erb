@@ -1,0 +1,41 @@
+
+<div class="section">
+  <div class="first-row-content">
+    <div class="first-row-content-top">
+      <div class="first-row-content-back-button">
+        <span class="back-icon"><i class="fas fa-chevron-left"></i></span>
+        <p class="back-text">Back</p>
+      </div>
+      <div class="header-text"><h1>Select Text Card!</h1>
+      </div>
+        <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
+      </div>
+    <p class="lead text-center mt-1" style="color: #5151CC;"><%= @full_text.title %></p>
+  </div>
+</div>
+
+<div class="container mb-4">
+  <div class="row">
+    <div class="col-12">
+      <% @text_paragraphs.each do |paragraph| %>
+        <div class="text-card-solid-border">
+          <p class="text-content"><%= paragraph.content %></p>
+          <p class="card-number-integer"><%= paragraph.order_number %></p>
+          <div class="done-or-not-icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <div class="link-to-single-text-paragraph">
+            <%= link_to full_text_text_paragraph_path(@full_text, paragraph), class: "text-card-link" do %>
+            <i class="fas fa-chevron-right"></i>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+</div>
+
+
+
+<!-- <div class="not-done-icon"><i class="fas fa-times-circle"></i></div> -->
