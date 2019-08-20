@@ -4,7 +4,6 @@ class User < ApplicationRecord
 
   has_many :full_texts, dependent: :destroy
 
-
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
