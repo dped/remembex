@@ -49,5 +49,4 @@ class FullTextsController < ApplicationController
   def full_text_params
     params.require(:full_text).permit(:title, :percentage)
   end
-
 end
