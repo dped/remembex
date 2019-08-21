@@ -5,8 +5,8 @@
 }
 
 .game_session_game_container {
-  width: 55vw;
-  height: 970px;
+  width: 70vw;
+  // height: 970px;
   background-color: white;
   opacity: 0.9;
   margin: 0 auto;
@@ -14,9 +14,9 @@
   margin-top: 210px;
   overflow: scroll;
   p {
-    text-align: center;
+    text-align: left;
     font-size: 42px;
-    padding: 30px 25px;
+    padding: 50px 50px;
   }
 }
 
