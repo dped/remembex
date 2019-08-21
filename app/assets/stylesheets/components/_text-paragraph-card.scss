@@ -50,7 +50,7 @@
   top: 1.8rem;
   left: -44px;
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .back-icon {
@@ -92,4 +92,9 @@
 
 .back {
   margin-left: 0;
+}
+
+.feature-image-paragraphs {
+  background-image: url(images/feature-paragraphs-image.jpg);
+
 }
