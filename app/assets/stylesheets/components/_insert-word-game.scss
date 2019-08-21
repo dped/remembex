@@ -5,3 +5,10 @@
 .right-answer-input {
   color: green;
 }
+
+input.insert_word_input:focus,
+select.insert_word_input:focus,
+textarea.insert_word_input:focus,
+button.insert_word_input:focus {
+    outline: none;
+}

@@ -13,7 +13,7 @@
           <% count = 1 %>
           <% @chopped_paragraph.each do |section| %>
             <% if section.is_a? Hash %>
-                <%= text_field_tag "word#{count}", nil, class: "insert_word_input", placeholder: "Insert word", data: {answer: section[:secret_word] } %>
+                <%= text_field_tag "word#{count}", nil, class: "insert_word_input text-center", placeholder: "?", style: "width: #{section[:secret_word].length * 27}px",data: { answer: section[:secret_word] } %>
               <% count += 1 %>
             <% else %>
               <%= section %>
