@@ -1,5 +1,5 @@
 class FullText < ApplicationRecord
-  has_many :text_paragraphs
+  has_many :text_paragraphs, dependent: :destroy
   belongs_to :user
   validates :title, presence: true
   validates :percentage, inclusion: (0..100), null: false
