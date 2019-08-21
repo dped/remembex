@@ -1,22 +1,30 @@
-<div class="game_session_main_container">
-  <div class="game_session_game_container">
-    <h1>Insert right word</h1>
-    <%= form_tag(update_game_session_path, method: :post, id: "insert_word_game_form", data: { game_session_id: @game_session.id }) do %>
-      <p>
-        <% count = 1 %>
-        <% @chopped_paragraph.each do |section| %>
-          <% if section.is_a? Hash %>
-              <%= text_field_tag "word#{count}", nil, class: "insert_word_input", placeholder: "Insert word", data: {answer: section[:secret_word] } %>
-            <% count += 1 %>
-          <% else %>
-            <%= section %>
+<div class="remembex_header">
+  <%= link_to "back to text_paragraph", text_paragraph_path(@game_session.text_paragraph) %>
+    <div class="game_session_header_container">
+      <h1 class="text_paragraph_show_title">Insert word game</h1>
+      <h3><%= @game_session.text_paragraph.full_text.title %></h3>
+    </div>
+</div>
+<div class="game_session_background_container">
+  <div class="game_session_main_container">
+    <div class="game_session_game_container">
+      <%= form_tag(update_game_session_path, method: :post, id: "insert_word_game_form", data: { game_session_id: @game_session.id }) do %>
+        <p>
+          <% count = 1 %>
+          <% @chopped_paragraph.each do |section| %>
+            <% if section.is_a? Hash %>
+                <%= text_field_tag "word#{count}", nil, class: "insert_word_input", placeholder: "Insert word", data: {answer: section[:secret_word] } %>
+              <% count += 1 %>
+            <% else %>
+              <%= section %>
+            <% end %>
           <% end %>
-        <% end %>
-      </p>
-    <% end %>
+        </p>
+      <% end %>
 
 
 
-    <%= javascript_pack_tag 'insert_word_game' %>
+      <%= javascript_pack_tag 'insert_word_game' %>
+    </div>
   </div>
 </div>
