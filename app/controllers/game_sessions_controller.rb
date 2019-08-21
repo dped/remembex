@@ -10,6 +10,15 @@ class GameSessionsController < ApplicationController
     @game_session.save
   end
 
+  def create
+    @game_session = GameSession.new
+    @text_paragraph = TextParagraph.find(params[:text_paragraph_id])
+    @game_session.text_paragraph = @text_paragraph
+    @game_session.game = Game.first
+    @game_session.save
+    redirect_to game_session_path(@game_session)
+  end
+
   def guess_word
     @game_session = GameSession.find(params[:id])
     @game_session.number_of_attempts += 1

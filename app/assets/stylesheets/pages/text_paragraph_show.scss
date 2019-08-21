@@ -1,22 +1,46 @@
 .text_paragraph_show_main_container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin-top: 100px;
+  text-align: center;
 }
 
 
 .text_paragraph_show_container {
   text-align: center;
-  height: 500px;
-  width: 50vw;
+  height: 930px;
+  width: 55vw;
+  background-color: white;
+  opacity: 0.8;
+  padding: 10px 10px;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-top: 100px;
+  overflow: scroll;
 }
 
 .text_paragraph_show_title {
   font-size: 40px;
   margin-bottom: 40px;
+  text-align: center
 }
 
 
 .text_paragraph_show_text {
-  font-size: 28px;
+  font-size: 42px;
+  padding-top: 30px;
+}
+
+.text_paragraph_background_container {
+  position: absolute;
+  background-image: url(https://images.unsplash.com/photo-1517495306984-f84210f9daa8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80);
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: -100;
+  overflow: scroll;
 }

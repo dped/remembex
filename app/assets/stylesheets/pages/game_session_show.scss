@@ -1,14 +1,22 @@
 .game_session_main_container {
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
 .game_session_game_container {
-  width: 50vw;
-  height: 500px;
-  h1 {
+  width: 55vw;
+  height: 970px;
+  background-color: white;
+  opacity: 0.9;
+  margin: 0 auto;
+  border-radius: 10px;
+  margin-top: 210px;
+  overflow: scroll;
+  p {
     text-align: center;
-    margin-bottom: 40px;
+    font-size: 42px;
+    padding: 30px 25px;
   }
 }
 
@@ -17,4 +25,17 @@
   border: none;
   text-align: center;
   width: 90px;
+}
+
+.game_session_background_container {
+  background-image: url(https://images.unsplash.com/photo-1506252374453-ef5237291d83?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80);
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: -100;
+  overflow: scroll;
+  opacity: 0.9;
 }
