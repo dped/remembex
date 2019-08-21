@@ -2,7 +2,8 @@ console.log("read aloud file")
 
 const button = document.getElementById('voice-btn');
 
-const text = `${@@text_paragraph.content}`
+// const text = `${@@text_paragraph.content}`
+const text = `THIS IS A TEST`;
 
 button.addEventListener('click', () => {
   if (!button.classList.contains('playing')) {
