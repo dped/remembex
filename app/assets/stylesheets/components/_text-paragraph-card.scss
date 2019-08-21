@@ -1,0 +1,96 @@
+.text-card-solid-border {
+  position: relative;
+  border-style: solid;
+  padding: 5%;
+  margin-top: 5%;
+  border-radius: 0 14px 14px 0;
+  border-width: 1px 1px 1px 48px;
+  border-color: #6666FF;
+  background-color: white;
+}
+
+.link-to-single-text-paragraph {
+  font-size: 30px;
+  position: absolute;
+  right: -36px;
+  bottom: 46%;
+  margin: 0;
+}
+
+.title {
+  font-size: 1.4rem;
+  padding-top: 1rem;
+}
+
+.text-content {
+  font-size: 24px;
+}
+
+.done-or-not-icon {
+  font-size: 28px;
+  color: white;
+  position: absolute;
+  left: -37px;
+  bottom: 5%;
+}
+
+.first-row-content {
+  height: 124px;
+  width: 100%;
+  background-color: #E3E4EB;
+  padding: 0px 20px;
+  h1 {
+    margin: 0px;
+  }
+}
+
+.card-number-integer {
+  color: #FFF;
+  position: absolute;
+  top: 1.8rem;
+  left: -30px;
+  font-size: 20px;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.back-icon {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.back-text {
+  font-size: 20px;
+}
+
+.first-row-content-back-button {
+  display:flex;
+  color: #6666FF;
+}
+
+.first-row-content-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.2rem;
+}
+
+.header-text {
+  color: #5151CC;
+}
+
+.not-done-icon {
+  font-size: 36px;
+  color: #FF6B6B;
+  position: absolute;
+  left: -36px;
+  bottom: 5%;
+}
+
+.text-card-link {
+  color: black;
+}
+
+.back {
+  margin-left: 0;
+}

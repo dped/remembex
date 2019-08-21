@@ -1,0 +1,22 @@
+.create_full_text_form {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60vw;
+  margin: 0 auto;
+  align-items: center;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin-top: 140px;
+  margin-bottom: 150px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  .form-inputs {
+    width: 550px;
+  }
+  #other_content {
+    height: 450px;
+  }
+
+}
