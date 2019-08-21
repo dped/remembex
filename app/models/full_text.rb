@@ -1,4 +1,3 @@
-require 'pry-byebug'
 class FullText < ApplicationRecord
   has_many :text_paragraphs
   belongs_to :user
