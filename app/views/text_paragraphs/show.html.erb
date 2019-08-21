@@ -1,23 +1,32 @@
-<script src="https://code.responsivevoice.org/responsivevoice.js?key=JXrgWNPm"></script>
+<div class="remembex_header">
+  <%= link_to "back to text_paragraphs", full_text_text_paragraphs_path(@text_paragraph.full_text)  %>
+    <div class="text_paragraph_header_container">
+      <h1 class="text_paragraph_show_title"><%= @text_paragraph.full_text.title %></h1>
+    </div>
+</div>
 
-<div class="text_paragraph_show_main_container">
-  <div class="text_paragraph_show_container">
-    <h1 class="text_paragraph_show_title"><%= @text_paragraph.full_text.title %></h1>
-    <p class="text_paragraph_show_text"><%= @text_paragraph.content %></p>
+<div class="text_paragraph_background_container">
+  <script src="https://code.responsivevoice.org/responsivevoice.js?key=JXrgWNPm"></script>
 
-
-  <button onclick="responsiveVoice.speak('<%= @text_paragraph.content %>');"
-    type="button" value="Play">Play</button>
-
-    <button onclick="responsiveVoice.pause('<%= @text_paragraph.content %>');"
-    type="button" value="Play">Pause</button>
-
-    <button onclick="responsiveVoice.resume('<%= @text_paragraph.content %>');"
-    type="button" value="Play">Resume</button>
-
-    <a href="#" id="voice-btn" class="btn btn-primary">Click me bitch</a>
+  <div class="text_paragraph_show_main_container">
+    <div class="text_paragraph_show_container">
+      <p class="text_paragraph_show_text"><%= @text_paragraph.content %></p>
 
 
-    <%= javascript_pack_tag "read_aloud" %>
+      <!-- <button onclick="responsiveVoice.speak('<%= @text_paragraph.content %>');"
+      type="button" value="Play">Play</button>
+
+      <button onclick="responsiveVoice.pause('<%= @text_paragraph.content %>');"
+      type="button" value="Play">Pause</button>
+
+      <button onclick="responsiveVoice.resume('<%= @text_paragraph.content %>');"
+      type="button" value="Play">Resume</button> -->
+
+      <a href="#" id="voice-btn" class="btn btn-primary">Click me bitch</a>
+
+
+      <%= javascript_pack_tag "read_aloud" %>
+    </div>
   </div>
+  <%= link_to "Play a game!", create_game_session_path(@text_paragraph), method: :post, class:"btn_play_game" %>
 </div>
