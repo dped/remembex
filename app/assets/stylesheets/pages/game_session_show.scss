@@ -1,0 +1,20 @@
+.game_session_main_container {
+  display: flex;
+  justify-content: center;
+}
+
+.game_session_game_container {
+  width: 50vw;
+  height: 500px;
+  h1 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
+
+.insert_word_input {
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  width: 90px;
+}
