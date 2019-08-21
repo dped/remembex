@@ -1,6 +1,8 @@
 class TextParagraphsController < ApplicationController
   before_action :set_text_paragraph, only: :show
 
+  skip_before_action :verify_authenticity_token, only: [:guess_word]
+
   def index
     @full_text = FullText.find(params[:full_text_id])
     @text_paragraphs = @full_text.text_paragraphs

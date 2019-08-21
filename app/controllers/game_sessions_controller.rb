@@ -6,6 +6,7 @@ class GameSessionsController < ApplicationController
     @chopped_paragraph = @game_session.chop_paragraph
     input_count = @chopped_paragraph.count { |element| element.is_a? Hash }
     @game_session.number_of_inputs = input_count
+    @game_session.number_of_attempts = 0
     @game_session.save
   end
 
@@ -27,5 +28,3 @@ class GameSessionsController < ApplicationController
   #   end.join
   # end
 end
-
-
