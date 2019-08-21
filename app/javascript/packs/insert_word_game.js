@@ -2,6 +2,7 @@ const form = document.getElementById("insert_word_game_form");
 const gameSessionId = form.dataset.gameSessionId;
 console.log(gameSessionId);
 const inputs = document.querySelectorAll('input');
+
 inputs.forEach((input) => {
   input.addEventListener('blur', (event) => {
     const guess = event.currentTarget.value;
@@ -25,7 +26,10 @@ inputs.forEach((input) => {
           wrapper.innerHTML = answer
           input.replaceWith(wrapper);
         } else {
-          input.classList.add("wrong-answer-input");
+          const wrapper = document.createElement('span');
+          wrapper.classList.add('wrong-answer-input')
+          wrapper.innerHTML = answer
+          input.replaceWith(wrapper);
         }
       })
   });

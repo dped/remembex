@@ -16,6 +16,8 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 
+gem 'espeak-ruby', '~> 1.0', '>= 1.0.4'
+
 group :development do
   gem 'web-console', '>= 3.3.0'
 end

@@ -1,6 +1,8 @@
 class TextParagraphsController < ApplicationController
   before_action :set_text_paragraph, only: :show
 
+  skip_before_action :verify_authenticity_token, only: [:guess_word]
+
   def index
     @text_paragraphs = TextParagraph.all
   end
