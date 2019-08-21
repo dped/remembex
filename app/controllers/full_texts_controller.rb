@@ -18,7 +18,7 @@ class FullTextsController < ApplicationController
     @full_text.generate_paragraphs(params[:other][:content])
     @full_text.percentage = 0
     if @full_text.save
-      redirect_to full_text_path(@full_text)
+      redirect_to full_text_text_paragraphs_path(@full_text)
     else
       render :new
     end
