@@ -1,0 +1,49 @@
+<h1> Here we go </h1>
+
+
+
+
+ <% @full_texts.each do |full_text| %>
+
+   <div class="card-full-text" style="max-width: 500px;">
+
+    <div class="full-card">
+
+      <div class="blue-stuff">
+        <img class="decoration-for-side-bar"  src="https://img.icons8.com/bubbles/100/000000/innovation.png" width="150" height="150">
+      </div>
+
+    <div class="white-stuff">
+
+         <h5 class="text-card-title"><%=full_text.title[0..13]%></h5>
+
+        <p class="text-card-briefly"><%=full_text.text_paragraphs.first.content[0..150]%>...</p>
+
+        <%= link_to full_text_path(full_text), method: :delete, class:"btn-delete-text" do %>
+        <%= image_tag "https://img.icons8.com/dusk/64/000000/waste.png" %>
+        <% end %>
+
+        <%= link_to full_texts_path, class:"btn-read-all-text" do %>
+        <%= image_tag "https://img.icons8.com/dusk/64/000000/document.png" %>
+        <% end %>
+
+        <%= link_to full_text_path(full_text), class:"btn-mark-as-done-text" do %>
+        <%= image_tag "https://img.icons8.com/dusk/64/000000/ok.png" %>
+        <% end %>
+
+    </div>
+   </div>
+   <br>
+   <br>
+
+
+    <% end %>
+
+    <%= link_to new_full_text_path, class: "btn btn-add-new-text" do %>
+      <p>+</p>
+    <% end %>
+
+
+
+
+
