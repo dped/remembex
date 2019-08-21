@@ -1,0 +1,86 @@
+.full-card {
+  margin-left: 50px;
+  height: 295px;
+  width: 537px;
+  display: flex;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+
+
+  .blue-stuff {
+    background: #8559a5;
+    width: 161px;
+    height: 100%;
+  }
+
+  .white-stuff {
+    position: relative;
+    background: white;
+    width: 100%;
+
+    width: 537px;
+    height: 295px;
+
+    .text-card-title {
+    padding-top: 30px;
+  }
+
+    .card-full-text-blank {
+
+  }
+
+  .btn-delete-text {
+    position: absolute;
+    bottom: 5px;
+    right: -10px;
+    /*top: 0px;*/
+    /*left: 0px;*/
+    border-style: none;
+    background-color: transparent;
+  }
+
+  .btn-read-all-text {
+    position: absolute;
+    bottom: 2px;
+    left: -10px;
+    border-style: none;
+    background-color: transparent;
+  }
+
+  .btn-mark-as-done-text {
+    position: absolute;
+    top: 2px;
+    right: -8px;
+    border-style: none;
+    background-color: transparent;
+
+  }
+
+  .text-card-title {
+    padding-left: 30px;
+    font-family: "Raleway", "Helvetica", "sans-serif";
+    font-size: 35px;
+    font-weight: bold;
+
+
+
+  }
+
+  .text-card-briefly {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: "Raleway", "Helvetica", "sans-serif";
+
+
+
+
+  }
+
+  }
+
+}
+
+
+
+

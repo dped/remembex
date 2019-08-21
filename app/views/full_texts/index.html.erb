@@ -1,0 +1,58 @@
+<h1> Here we go </h1>
+
+<div class="card-full-text" style="max-width: 500px;">
+
+    <div class="full-card">
+
+      <div class="blue-stuff">
+        <img class="decoration-for-side-bar"  src="https://img.icons8.com/bubbles/100/000000/innovation.png" width="150" height="150">
+      </div>
+
+    <div class="white-stuff">
+
+        <h5 class="text-card-title">Title</h5>
+        <p class="text-card-briefly">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </p>
+        <button class="btn-delete-text"><img src="https://img.icons8.com/dusk/64/000000/waste.png"></i></button>
+        <button class="btn-read-all-text"><img src="https://img.icons8.com/dusk/64/000000/document.png"></i></button>
+        <button class="btn-mark-as-done-text"><img src="https://img.icons8.com/dusk/64/000000/ok.png"></i></button>
+        </div>
+
+</div>
+</div>
+
+
+
+ <% @full_texts.each do |full_text| %>
+
+   <div class="card-full-text" style="max-width: 500px;">
+
+    <div class="full-card">
+
+      <div class="blue-stuff">
+        <img class="decoration-for-side-bar"  src="https://img.icons8.com/bubbles/100/000000/innovation.png" width="150" height="150">
+      </div>
+
+    <div class="white-stuff">
+
+        <h5 class="text-card-title">Title</h5>
+        <p class="text-card-briefly">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </p>
+
+ <%= link_to full_text_path(@full_text), method: :delete, class:"btn-delete-text" do %>
+  <h1>MONKEY</h1>
+  <%= image_tag "https://img.icons8.com/dusk/64/000000/waste.png" %>
+ <% end %>
+
+        <button class="btn-read-all-text"><img src="https://img.icons8.com/dusk/64/000000/document.png"></button>
+        <button class="btn-mark-as-done-text"><img src="https://img.icons8.com/dusk/64/000000/ok.png"></button>
+        </div>
+
+</div>
+</div>
+
+    <% end %>
+
+
+
+
+
+<button class="btn-delete-text"><img src="https://img.icons8.com/dusk/64/000000/waste.png"></button>
