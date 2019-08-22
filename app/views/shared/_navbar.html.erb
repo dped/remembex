@@ -1,7 +1,13 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
-    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
-    <% end %>
+  <% if (action_name == "show" && controller_name == "text_paragraphs") %>
+    <%= link_to full_text_text_paragraphs_path(@text_paragraph.full_text), class:"btn_navbar_back" do %>
+    <%= image_tag "https://slack-imgs.com/?c=1&url=https%3A%2F%2Fimg.icons8.com%2Fdusk%2F64%2F000000%2Fundo.png", alt:"back symbol" %>
+    <% end  %>
+  <% else (action_name == "show" && controller_name == "game_sessions") %>
+    <%= link_to text_paragraph_path(@game_session.text_paragraph), class:"btn_navbar_back" do %>
+    <%= image_tag "https://slack-imgs.com/?c=1&url=https%3A%2F%2Fimg.icons8.com%2Fdusk%2F64%2F000000%2Fundo.png", alt:"back symbol" %>
+    <% end  %>
+  <% end %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>

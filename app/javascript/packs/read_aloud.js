@@ -2,21 +2,23 @@ console.log("read aloud file")
 
 const button = document.getElementById('voice-btn');
 
-// const text = `${@@text_paragraph.content}`
-
-const text = "This is a test"
-console.log(text)
+const text = button.dataset.content;
 
 button.addEventListener('click', () => {
-  if (!button.classList.contains('playing')) {
-    button.classList.add('playing');
+  if (button.dataset.state === 'initial') {
+    button.dataset.state = 'playing';
     responsiveVoice.speak(text);
-  }
-  if (button.classList.contains('paused')) {
-    button.classList.toggle('paused');
+    button.innerHTML = '';
+    button.innerHTML = '<i class="fas fa-pause"></i>';
+  } else if (button.dataset.state === 'paused') {
+    button.dataset.state = 'playing';
     responsiveVoice.resume(text);
+    button.innerHTML = '';
+    button.innerHTML = '<i class="fas fa-pause"></i>';
   } else {
-    button.classList.toggle('paused');
+    button.dataset.state = 'paused';
     responsiveVoice.pause(text);
+    button.innerHTML = '';
+    button.innerHTML = '<i class="fas fa-play"></i>';
   }
 })
