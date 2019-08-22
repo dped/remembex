@@ -11,9 +11,13 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
-   <!-- <%= render 'shared/navbar' %> -->
     <%= render 'shared/flashes' %>
-    <%= yield %>
+    <% if (action_name == "show" && controller_name == "text_paragraphs") || (action_name == "show" && controller_name == "game_sessions") %>
+      <%= render 'shared/navbar' %>
+      <%= yield %>
+    <% else %>
+      <%= yield %>
+    <% end %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
   </body>
