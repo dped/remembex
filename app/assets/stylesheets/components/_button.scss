@@ -45,6 +45,7 @@
   height: 70px;
   width: 70px;
   border-radius: 50%;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
   a:active {
   color: none;
   text-decoration: none;
@@ -69,6 +70,7 @@
   a:active {
   color: none;
   text-decoration: none;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
   }
 }
 
@@ -89,6 +91,7 @@
   width: 170px;
   border-radius: 50%;
   z-index: 100;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
   a:active {
   color: none;
   text-decoration: none;
