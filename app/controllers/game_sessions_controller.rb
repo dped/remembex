@@ -6,8 +6,12 @@ class GameSessionsController < ApplicationController
     @chopped_paragraph = @game_session.chop_paragraph
     input_count = @chopped_paragraph.count { |element| element.is_a? Hash }
     @game_session.number_of_inputs = input_count
-    @game_session.number_of_attempts = 0
+    @game_session.number_of_right_inputs = 0
     @game_session.save
+  end
+
+  def new
+    @game_session = GameSession.new
   end
 
   def create
@@ -21,9 +25,9 @@ class GameSessionsController < ApplicationController
 
   def guess_word
     @game_session = GameSession.find(params[:id])
-    @game_session.number_of_attempts += 1
     @game_session.save
     if params[:guess].downcase == params[:answer].downcase
+      @game_session.number_of_right_inputs += 1
       render json: {success: true}
     else
       render json: {success: false}

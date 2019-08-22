@@ -1,13 +1,23 @@
 .navbar-lewagon {
+  display: flex;
   justify-content: space-between;
+  position: relative;
   background: white;
   background-color: transparent;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+#navbarDropdown {
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.dropdown-toggle {
+  margin-top: 20px;
+  width: 80px;
+  height: 80px;
+}
+
+.dropdown-menu {
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
 }

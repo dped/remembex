@@ -1,17 +1,120 @@
-.btn_play_game {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 52px 32px;
-  text-align: center;
+// .btn_play_game {
+//   background-color: #4CAF50;
+//   border: none;
+//   color: white;
+//   padding: 30px 32px;
+//   text-align: center;
+//   text-decoration: none;
+//   display: inline-block;
+//   border-radius: 50%;
+//   height: 125px;
+//   width: 125px;
+//   position: relative;
+//   bottom: 20px;
+//   font-size: 24px;
+//   line-height: 22px;
+//   // box-shadow: 3px 3px 3px 3px;
+//   a {
+//     text-decoration: none;
+//   }
+// }
+
+.btn_navbar_back {
+  img {
+  margin-top: 20px;
+  height: 90px;
+  width: 90px;
+  }
+  a:active {
+  color: none;
   text-decoration: none;
-  display: inline-block;
-  border-radius: 50px;
-  height: 125px;
-  width: 250px;
-  position: relative;
-  bottom: -38px;
-  right: -390px;
-  font-size: 32px;
-  line-height: 4px;
+  }
 }
+
+.btn_listen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 30px;
+  left: 52px;
+  font-size: 1.75rem;
+  color: white;
+  background: #A020F0;
+  text-align: center;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  a:active {
+  color: none;
+  text-decoration: none;
+  }
+}
+
+.btn_play_game {
+  position: relative;
+  top: -100px;
+  left: 760px;
+  font-size: 35px;
+  line-height: 36px;
+  color: white;
+  padding: 44px 14px;
+  background: #1abc9c;
+  bottom: 0;
+  flex-grow: 1;
+  text-align: center;
+  height: 170px;
+  width: 170px;
+  border-radius: 50%;
+  a:active {
+  color: none;
+  text-decoration: none;
+  }
+}
+
+.btn_retry_game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -80px !important;
+  right : 75px;
+  font-size: 85px;
+  line-height: 36px;
+  color: white;
+  background: #1abc9c;
+  flex-grow: 1;
+  text-align: center;
+  height: 170px;
+  width: 170px;
+  border-radius: 50%;
+  z-index: 100;
+  a:active {
+  color: none;
+  text-decoration: none;
+  }
+}
+
+// .btn_listen {
+//   background-color: #4CAF50;
+//   border: none;
+//   color: white;
+//   padding: 49px 24px;
+//   text-align: center;
+//   text-decoration: none;
+//   display: inline-block;
+//   border-radius: 50%;
+//   height: 125px;
+//   width: 125px;
+//   position: relative;
+//   bottom: 20px;
+//   font-size: 24px;
+//   line-height: 22px;
+//   // box-shadow: 3px 3px 3px 3px;
+//   a {
+//     text-decoration: none;
+//   }
+// }
+
+
+
