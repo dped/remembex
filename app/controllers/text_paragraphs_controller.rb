@@ -5,18 +5,16 @@ class TextParagraphsController < ApplicationController
 
   def index
     @full_text = FullText.find(params[:full_text_id])
-    @text_paragraphs = @full_text.text_paragraphs
+    @text_paragraphs = @full_text.text_paragraphs.order(order_number: :asc)
   end
 
   def show
   end
 
-  def done?
-    if done
-      # show it is done
-    else
-      # show it is not done
-    end
+  def mark_as_done
+    @text_paragraph = TextParagraph.find(params[:id])
+    @text_paragraph.done = !@text_paragraph.done
+    @text_paragraph.save
   end
 
   def set_text_paragraph
