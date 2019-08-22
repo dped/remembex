@@ -1,0 +1,9 @@
+function changeIcon(innerHTML) {
+  const markAsDoneIcon = document.getElementById('mark-as-done-<%= @text_paragraph.id %>');
+  markAsDoneIcon.innerHTML = innerHTML;
+  markAsDoneIcon.classList.add("move-me");
+}
+
+changeIcon('<%= j render "text_paragraphs/mark_as_done_button", paragraph: @text_paragraph %>')
+
+

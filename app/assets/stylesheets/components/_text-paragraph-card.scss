@@ -1,10 +1,12 @@
 .white-link {
-  color: white;
-  &:hover {
-    color: white;
-  }
+  z-index: 2;
+  position: absolute;
+  left: -54px;
+  bottom: 5%;
 }
 
+/*   border-color: #6666FF;
+*/
 
 
 .text-card-solid-border {
@@ -14,8 +16,11 @@
   margin-top: 5%;
   border-radius: 0 14px 14px 0;
   border-width: 1px 1px 1px 68px;
-  border-color: #6666FF;
+  border-color: #D8D9E3;
   background-color: white;
+  box-shadow: -1px 2px 10px 1px rgba(0, 0, 0, 0.1);
+  z-index: 0;
+
 }
 
 .link-to-single-text-paragraph {
@@ -36,11 +41,8 @@
 }
 
 .done-or-not-icon {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: white;
-  position: absolute;
-  left: -49px;
-  bottom: 5%;
 }
 
 .first-row-content {
@@ -52,19 +54,18 @@
     margin: 0px;
   }
 }
-
+/*   color: #5151CC; eller   color: white;*/
 .card-number-integer {
-  color: #FFF;
+  color: #abadc3;
   position: absolute;
   top: 1.8rem;
   left: -44px;
-  font-size: 2rem;
+  font-size: 1.9rem;
   font-weight: 500;
 }
 
-.back-icon {
-  margin-right: 10px;
-  font-size: 20px;
+.back-button {
+  width: 56px;
 }
 
 .back-text {
@@ -86,17 +87,20 @@
 .header-text {
   color: #5151CC;
 }
-
+/*
 .not-done-icon {
   font-size: 36px;
   color: #FF6B6B;
   position: absolute;
   left: -36px;
   bottom: 5%;
-}
-
+}*/
+/* color: black;
+  opacity: 0.5; */
 .text-card-link {
-  color: black;
+  color: #c1c3d3;
+
+
 }
 
 .back {
@@ -105,5 +109,31 @@
 
 .feature-image-paragraphs {
   background-image: url(images/feature-paragraphs-image.jpg);
+}
+.green-icon {
+  color: #4CCC91;
+}
+
+.red-icon {
+  color: #FF6B6B;
+}
+.white-icon-bg{
+  width: 36px;
+  height: 36px;
+  background-color: white;
+  border-radius: 50%;
+
+}
+.background-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 60px;
+  position: absolute;
+  left: -54px;
+  bottom: 5%;
+}
+.move-me {
 
 }
