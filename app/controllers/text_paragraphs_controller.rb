@@ -11,12 +11,10 @@ class TextParagraphsController < ApplicationController
   def show
   end
 
-  def done?
-    if done
-      # show it is done
-    else
-      # show it is not done
-    end
+  def mark_as_done
+    @text_paragraph = TextParagraph.find(params[:id])
+    @text_paragraph.done = true
+    @text_paragraph.save
   end
 
   def set_text_paragraph

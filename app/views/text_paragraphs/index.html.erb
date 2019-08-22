@@ -25,7 +25,13 @@
           <p class="text-content"><%= paragraph.content %></p>
           <p class="card-number-integer"><%= paragraph.order_number %></p>
           <div class="done-or-not-icon">
-            <i class="fas fa-check-circle"></i>
+            <%= link_to '#', class: "white-link" do %>
+              <% if paragraph.done %>
+                <i class="fas fa-check-circle"></i>
+              <% else %>
+                <i class="fas fa-times-circle"></i>
+              <% end %>
+            <% end %>
           </div>
           <div class="link-to-single-text-paragraph">
             <%= link_to text_paragraph_path(paragraph), class: "text-card-link" do %>
