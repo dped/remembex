@@ -1,16 +1,29 @@
+.everything {
+  position: relative;
+}
+
+
 .full-card {
   margin-left: 50px;
   height: 295px;
   width: 537px;
   display: flex;
-  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 4px;
 
+
+  .decoration-for-side-bar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
 
   .blue-stuff {
     background: #A020F0;
     width: 161px;
     height: 100%;
+    position: relative
+
 
   }
 
@@ -59,6 +72,16 @@
 
   }
 
+   .procent-of-text {
+    position: absolute;
+    left: 440px;
+    top: 100px;
+
+    font-family: 'Rammetto One', cursive;
+    color: #5F5F5F;
+
+   }
+
   .text-card-title {
     padding-left: 30px;
     font-family: "Raleway", "Helvetica", "sans-serif";
@@ -95,6 +118,10 @@
 
 
 .btn-add-new-text {
+
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
   background-color: #1abc9c;
   width: 130px;
   height: 130px;
@@ -107,13 +134,14 @@
 
   margin: 4px 2px;
   border-radius: 65px;
-  box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, .2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 
+    text-shadow: 2px 2px 4px #D4D7DD;
     color: white;
     font-size: 80px;
   font-weight: bold;
-  position: relative;
+
   p {
     position: absolute;
     top: 0px;
@@ -123,4 +151,54 @@
 
 }
 
+  .border-bottom-bg-color {
+     background-color: #A020F0;
+     margin-bottom: 30px;
+     height: 200px;
+     display: flex;
+     position: relative;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+     .decoration-for-navbar {
+      position: absolute;
+      left: 25px;
+      top: 32px;
+     }
+
+     .header-home-page {
+       h1{
+        font-family: 'Rammetto One', cursive;
+        font-size: 50px;
+        text-shadow: 2px 2px 4px #000000;
+       }
+
+
+
+      color: white;
+      position: absolute;
+      left: 220px;
+      top: 60px;
+
+      .select-a-text {
+        position: absolute;
+        left: 100px;
+        top: 65px;
+      }
+
+
+     }
+
+     .avatar-large {
+      position: absolute;
+      height: 80px;
+      width: 80px;
+      border-radius: 55px;
+      top: 40px;
+      right: 50px;
+      border: 2px solid white;
+     }
+
+
+
+  }
 

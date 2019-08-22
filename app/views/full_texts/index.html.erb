@@ -1,29 +1,50 @@
-<h1> Here we go </h1>
+
+<div class="everything">
+<div class="navbar-home-page">
+
+  <div class="border-bottom-bg-color">
+
+
+
+        <%= image_tag "icons8-brain-100(1).png", alt: "alttext", class:"decoration-for-navbar" %>
+
+        <div class="header-home-page">
+          <h1>Remembex</h1>
+          <div class="select-a-text">
+          <h3><strong>Select a text</strong></h3>
+          </div>
+        </div>
+
+        <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/cveneziani">
 
 
 
 
- <% @full_texts.each do |full_text| %>
+  </div>
+  </div>
 
+
+
+
+  <% @full_texts.each do |full_text| %>
    <div class="card-full-text" style="max-width: 500px;">
 
     <div class="full-card">
-
       <div class="blue-stuff">
-        <img class="decoration-for-side-bar"  src="https://img.icons8.com/bubbles/100/000000/innovation.png" width="150" height="150">
+        <%= image_tag "icons8-innovation-100.png", class: "decoration-for-side-bar", alt: "icon" %>
       </div>
 
-    <div class="white-stuff">
+      <div class="white-stuff">
 
-         <h5 class="text-card-title"><%=full_text.title[0..13]%></h5>
+        <h5 class="text-card-title"><%= link_to full_text.title[0..13], full_text_text_paragraphs_path(full_text)%></h5>
 
-        <p class="text-card-briefly"><%=full_text.text_paragraphs.first.content[0..150]%>...</p>
+        <p class="text-card-briefly"><%= full_text.text_paragraphs.first.content[0..150]%>...</p>
 
         <%= link_to full_text_path(full_text), method: :delete, class:"btn-delete-text" do %>
         <%= image_tag "https://img.icons8.com/dusk/64/000000/waste.png" %>
         <% end %>
 
-        <%= link_to full_texts_path, class:"btn-read-all-text" do %>
+        <%= link_to full_text_path(full_text), class:"btn-read-all-text" do %>
         <%= image_tag "https://img.icons8.com/dusk/64/000000/document.png" %>
         <% end %>
 
@@ -31,17 +52,19 @@
         <%= image_tag "https://img.icons8.com/dusk/64/000000/ok.png" %>
         <% end %>
 
+        <h4 class="procent-of-text"> 100% </h4>
+      </div>
+     </div>
+     <br>
+     <br>
+
     </div>
-   </div>
-   <br>
-   <br>
+  <% end %>
 
+  <%= link_to new_full_text_path, class: "btn btn-add-new-text" do %>
+    <p>+</p>
+  <% end %>
 
-    <% end %>
-
-    <%= link_to new_full_text_path, class: "btn btn-add-new-text" do %>
-      <p>+</p>
-    <% end %>
 
 
 
