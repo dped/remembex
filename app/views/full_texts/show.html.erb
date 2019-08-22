@@ -1,0 +1,26 @@
+<div class="full-text-show-page">
+<div class="navbar-full-text-show-page">
+
+
+
+        <%= link_to full_texts_path, class:"btn-go-back" do %>
+        <%= image_tag "https://img.icons8.com/dusk/64/000000/undo.png" %>
+        <% end %>
+
+
+          <h1><%= @full_text.title %></h1>
+
+
+
+        <img class="avatar-show-page" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/cveneziani">
+
+
+
+
+
+  </div>
+   <div class="full-text-container">
+  <p class="text-show-all"><%= @full_text.text_paragraphs.map(&:content).join("\n\n") %></p>
+  </div>
+  </div>
+
