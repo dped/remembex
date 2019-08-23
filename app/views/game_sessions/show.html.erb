@@ -21,11 +21,12 @@
         </p>
       <% end %>
     </div>
-    <%= link_to create_game_session_path(@game_session.text_paragraph), method: :post, class:"btn_retry_game" do %>
+    <%= link_to create_game_session_path(@game_session.text_paragraph), class:"btn_retry_game" do %>
       <i class="fas fa-undo-alt"></i>
     <% end %>
   </div>
+  <button id="sweet-alert-demo" data-right-inputs="<%= @game_session.number_of_right_inputs %>" data-number-of-inputs="<%= @game_session.number_of_inputs %>" data-text-paragraph-id="<%= @game_session.text_paragraph.id %>" class="btn btn-primary">Click me!</button>
 </div>
       <%= javascript_pack_tag 'insert_word_game' %>
-
+      <%= javascript_pack_tag 'finished_game_popup' %>
 
