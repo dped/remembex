@@ -36,7 +36,7 @@
 
       <div class="white-stuff">
 
-        <h5 class="text-card-title"><%= link_to full_text.title[0..13], full_text_text_paragraphs_path(full_text)%></h5>
+        <h5 class="text-card-title"><%= link_to full_text.title[0..11], full_text_text_paragraphs_path(full_text)%></h5>
 
         <p class="text-card-briefly"><%= full_text.text_paragraphs.first.content[0..150]%>...</p>
 
