@@ -19,16 +19,18 @@
 //   }
 // }
 
+
 .btn_navbar_back {
   img {
   margin-top: 20px;
   height: 90px;
   width: 90px;
   }
-  a:active {
-  color: none;
+}
+
+a.btn_listen_game:focus, a.btn_listen_game:visited, a.btn_listen_game:active, a.btn_listen_game:hover {
   text-decoration: none;
-  }
+  color: white;
 }
 
 .btn_listen {
@@ -46,10 +48,11 @@
   width: 70px;
   border-radius: 50%;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
-  a:active {
-  color: none;
+}
+
+a.btn_play_game:focus, a.btn_play_game:visited, a.btn_play_game:active, a.btn_play_game:hover {
   text-decoration: none;
-  }
+  color: white;
 }
 
 .btn_play_game {
@@ -67,11 +70,12 @@
   height: 170px;
   width: 170px;
   border-radius: 50%;
-  a:active {
-  color: none;
-  text-decoration: none;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
-  }
+}
+
+a.btn_retry_game:focus, a.btn_retry_game:visited, a.btn_retry_game:active, a.btn_retry_game:hover {
+  text-decoration: none;
+  color: white;
 }
 
 .btn_retry_game {
@@ -92,10 +96,6 @@
   border-radius: 50%;
   z-index: 100;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
-  a:active {
-  color: none;
-  text-decoration: none;
-  }
 }
 
 // .btn_listen {
