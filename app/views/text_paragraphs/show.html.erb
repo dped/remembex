@@ -21,8 +21,10 @@
       type="button" value="Play">Resume</button> -->
       <a href="#" id="voice-btn" data-content="<%= @text_paragraph.content %>" data-state="initial" class="btn_listen"><i class="fas fa-play"></i></a>
     </div>
-    <%= link_to "Go to games!", create_game_session_path(@text_paragraph), method: :post, class:"btn_play_game" %>
+    <%# link_to "Go to games!", create_game_session_path(@text_paragraph), method: :post, class: "btn_play_game" %>
   </div>
 </div>
-  <script src="https://code.responsivevoice.org/responsivevoice.js?key=JXrgWNPm"></script>
+  <!-- temporary spot for game button, unclickable in original spot -->
+    <%= link_to "Go to games!", create_game_session_path(@text_paragraph), method: :post, class: "btn_play_game" %>
+  <!-- <script src="https://code.responsivevoice.org/responsivevoice.js?key=JXrgWNPm"></script> -->
     <%= javascript_pack_tag "read_aloud" %>

@@ -1,13 +1,18 @@
-TextParagraph.destroy_all
 User.destroy_all
+GameSession.destroy_all
 FullText.destroy_all
+TextParagraph.destroy_all
 Game.destroy_all
+
+puts "creating 1 user"
 
 abraham_lincoln = User.new(username: "abraham Lincoln",
   email: "abraham@gmail.com",
   password: "123456")
 
-abraham_lincoln.save
+abraham_lincoln.save!
+
+puts "creating 1 full text"
 
 speech = "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.
 Now we are engaged in a great civil war, testing whether that nation, or any nation so conceived and so dedicated, can long endure. We are met on a great battle-field of that war. We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live. It is altogether fitting and proper that we should do this.
@@ -17,7 +22,9 @@ gettysburg = FullText.new(title: "Gettysburg Address",
   user: abraham_lincoln
 )
 
-Game.create(name: "insert_word_game")
+puts "creating 1 game"
+
+Game.create!(name: "insert_word_game")
 
 gettysburg.generate_paragraphs(speech)
-gettysburg.save
+gettysburg.save!
