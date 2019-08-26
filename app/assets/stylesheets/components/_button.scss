@@ -28,7 +28,7 @@
   }
 }
 
-a.btn_listen_game:focus, a.btn_listen_game:visited, a.btn_listen_game:active, a.btn_listen_game:hover {
+a.btn_listen:focus, a.btn_listen:visited, a.btn_listen:active, a.btn_listen:hover {
   text-decoration: none;
   color: white;
 }
@@ -57,7 +57,7 @@ a.btn_play_game:focus, a.btn_play_game:visited, a.btn_play_game:active, a.btn_pl
 
 .btn_play_game {
   position: relative;
-  top: -100px;
+  top: -135px;
   left: 760px;
   font-size: 35px;
   line-height: 36px;
@@ -71,7 +71,7 @@ a.btn_play_game:focus, a.btn_play_game:visited, a.btn_play_game:active, a.btn_pl
   width: 170px;
   border-radius: 50%;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
-  z-index: 10000;
+  z-index: 1000;
 }
 
 a.btn_retry_game:focus, a.btn_retry_game:visited, a.btn_retry_game:active, a.btn_retry_game:hover {
@@ -90,6 +90,31 @@ a.btn_retry_game:focus, a.btn_retry_game:visited, a.btn_retry_game:active, a.btn
   line-height: 36px;
   color: white;
   background: #1abc9c;
+  flex-grow: 1;
+  text-align: center;
+  height: 170px;
+  width: 170px;
+  border-radius: 50%;
+  z-index: 100;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
+}
+
+a.btn_retry_game_popup:focus, a.btn_retry_game_popup:visited, a.btn_retry_game_popup:active, a.btn_retry_game_popup:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.btn_retry_game_popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -80px !important;
+  right : 715px;
+  font-size: 85px;
+  line-height: 36px;
+  color: white;
+  background: #A020F0;
   flex-grow: 1;
   text-align: center;
   height: 170px;
