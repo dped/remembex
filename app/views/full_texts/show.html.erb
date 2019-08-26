@@ -4,7 +4,7 @@
 
 
         <%= link_to full_texts_path, class:"btn-go-back" do %>
-        <%= image_tag "https://img.icons8.com/dusk/64/000000/undo.png" %>
+        <%= image_tag "left-arrow.png" %>
         <% end %>
 
 
@@ -20,6 +20,7 @@
 
   </div>
    <div class="full-text-container">
+    <%= image_tag "open-book.png", alt: "alttext", class:"decoration-for-reading-mode"%>
   <p class="text-show-all"><%= @full_text.text_paragraphs.map(&:content).join("\n\n") %></p>
   </div>
   </div>
