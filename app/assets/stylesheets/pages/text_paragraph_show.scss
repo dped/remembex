@@ -18,6 +18,7 @@
   margin-top: 50px;
   overflow: scroll;
   position: relative;
+  margin-bottom: 50px;
 }
 
 .text_paragraph_show_title {
@@ -36,16 +37,11 @@
 
 .text_paragraph_background_container {
   position: relative;
-  background-image: url(https://images.unsplash.com/photo-1506252374453-ef5237291d83?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80);
+  background-image: url("https://images.unsplash.com/photo-1506252374453-ef5237291d83?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80");
   background-image: linear-gradient(to right, rgba(160,32,240,0.5), rgba(160,32,240,0.6));
   background-position: center;
   background-size: cover;
-  height: 100%;
-  width: 100%;
-  position: fixed;
   top: 0;
-  z-index: -100;
-  overflow: scroll;
 }
 
 .text_paragraph_buttons_container {
