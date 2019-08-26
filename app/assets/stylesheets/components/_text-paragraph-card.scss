@@ -16,13 +16,15 @@
   margin-top: 5%;
   border-radius: 0 14px 14px 0;
   border-width: 1px 1px 1px 68px;
-  border-color: #D8D9E3;
+  border-color: #E3E4EB;
   background-color: white;
   box-shadow: -1px 2px 10px 1px rgba(0, 0, 0, 0.2);
   z-index: 0;
-
 }
 
+.text-card-solid-border p {
+  padding-bottom: 50px;
+}
 .link-to-single-text-paragraph {
   font-size: 30px;
   position: absolute;
@@ -57,7 +59,7 @@
 }
 /*   color: #5151CC; eller   color: white;*/
 .card-number-integer {
-  color: #6666FF;
+  color:  #3498db;
   position: absolute;
   top: 1.8rem;
   left: -44px;
@@ -66,7 +68,7 @@
 }
 
 .back-button {
-  width: 56px;
+  width: 48px;
 }
 
 .back-text {
@@ -188,7 +190,7 @@
   font-size: 16px;
   position: absolute;
   bottom: 5%;
-  left: 200px;
+  left: 80px;
   margin-top: 20px;
   margin-bottom: 10px;
 }
@@ -197,7 +199,7 @@
   font-size: 16px;
   position: absolute;
   bottom: 5%;
-  right: 240px;
+  right: 100px;
   margin-top: 20px;
   margin-bottom: 10px;
 }
@@ -209,5 +211,5 @@
 .text-paragraphs-index-background {
   background: #6190E8;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to bottom, #efeef8, #d8d5ff);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to bottom, #efeef8, #d8d5ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: linear-gradient(to bottom, #dff9fb, #dfe6e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
