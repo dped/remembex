@@ -22,12 +22,14 @@
 
       <a href="#" id="voice-btn" data-content="<%= @text_paragraph.content %>" data-state="initial" class="btn_listen"><i class="fas fa-play"></i></a>
     </div>
-    <%= link_to "Go to games!", create_game_session_path(@text_paragraph), method: :post, class:"btn_play_game" %>
+    <%= link_to "Go to game 1!", create_game_session_path(@text_paragraph), method: :post, class:"btn_play_game" %>
+    <%= link_to "Go to game 2!", create_game_two_session_path(@text_paragraph), method: :post, class:"btn_play_game2" %>
   </div>
 </div>
 
   <!-- temporary spot for game button, unclickable in original spot -->
     <%# link_to "Go to games!", create_game_session_path(@text_paragraph), method: :post, class: "btn_play_game" %>
-  <!-- <script src="https://code.responsivevoice.org/responsivevoice.js?key=JXrgWNPm"></script> -->
+
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=JXrgWNPm"></script>
 
     <%= javascript_pack_tag "read_aloud" %>
