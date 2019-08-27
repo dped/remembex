@@ -17,4 +17,5 @@ Rails.application.routes.draw do
   get 'game_sessions/:id/final_score', to: 'game_sessions#final_score', as: :final_score
   get 'game_sessions/:id/input_count', to: 'game_sessions#input_count', as: :input_count
 
+  get 'dashboard', to: "pages#dashboard"
 end
