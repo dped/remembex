@@ -4,7 +4,7 @@
       <div class="first-row-content-top">
         <div class="first-row-content-back-button">
           <%= link_to full_texts_path do %>
-          <%= image_tag "https://img.icons8.com/dusk/64/000000/undo.png", class: "back-button", alt:"back" %>
+          <%= image_tag "left-arrow-blue", class: "back-button", alt:"back" %>
             <!-- <i class="fas fa-chevron-left"></i> -->
           <% end  %>
         </div>
@@ -12,17 +12,18 @@
         </div>
         <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
       </div>
-      <p class="lead text-center mt-1" style="color: #5151CC;"><%= @full_text.title %></p>
+      <p class="lead text-center mt-1 text-primary" style="color: #5151CC; font-size: 24px;"><%= @full_text.title %></p>
     </div>
   </div>
 
   <div class="container pb-5">
     <div class="row">
       <div class="col-12">
+        <h3 class="text-center mt-5 text-primary">List of all your text paragraphs</h3>
         <% @text_paragraphs.each do |paragraph| %>
           <div class="text-card-solid-border">
             <p class="text-content"><%= paragraph.content %></p>
-            <p class="card-number-integer"><%= paragraph.order_number %></p>
+            <p class="card-number-integer text-primary"><%= paragraph.order_number %></p>
             <div class="done-or-not-icon">
               <%= link_to mark_as_done_path(paragraph), remote: true, method: :patch, class: "white-link", id: "mark-as-done-#{paragraph.id}" do %>
                 <%= render 'mark_as_done_button', paragraph: paragraph %>
@@ -32,22 +33,23 @@
               </div>
 
             </div>
-            <div class="link-to-single-text-paragraph">
-              <%= link_to text_paragraph_path(paragraph), class: "text-card-link" do %>
-              <i class="fas fa-chevron-right"></i>
-              <% end %>
-            </div>
 
             <div class="div-wraper d-flex">
               <div class="d-flex align-items-center justify-content-center game-options">
                 <div><strong>Play </strong></div>
-                <div><a href="#" class="to-game-one-button">Game One</a></div>
+                <div><%= link_to "Game One", create_game_session_path(paragraph), method: :post, class: "to-game-one-button" %>
+                </div>
               </div>
               <div class="d-flex align-items-center justify-content-center read-listen-options">
                 <div><strong>Listen to </strong></div>
-                <div><a href="#" class="to-listen-to-button">Paragraph</a></div>
+                <div><%= link_to "Paragraph", text_paragraph_path(paragraph), class: "to-listen-to-button" %>
+                </div>
               </div>
             </div>
+
+
+
+
 
           </div>
         <% end %>

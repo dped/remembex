@@ -1,26 +1,47 @@
 
 <div class="everything">
-<div class="navbar-home-page">
+  <div class="information-window">
+    <div class="inside-wrapper">
+    <%= image_tag "remove.png", alt: "passed", class: "btn-close-info" %>
+    <%= image_tag "brain.png", alt: "passed", class: "btn-decoration-info" %>
 
-  <div class="border-bottom-bg-color">
+
+    <h1> How to use: </h1>
+    <h4> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis auctor elit sed. Ac felis donec et odio pellentesque diam volutpat commodo. Sociis natoque penatibus et magnis dis parturient. Tincidunt ornare massa eget egestas. Ut aliquam purus sit amet luctus venenatis. Sed velit dignissim sodales ut. Viverra nibh cras pulvinar mattis nunc sed. Faucibus purus in massa tempor nec feugiat nisl pretium fusce. Facilisi morbi tempus iaculis urna. Nunc eget lorem dolor sed viverra ipsum nunc. Pellentesque adipiscing commodo elit at imperdiet. Dolor sit amet consectetur adipiscing elit pellentesque habitant. </h4>
+
+
+    </div>
+
+  </div>
 
 
 
-        <%= image_tag "icons8-brain-100(1).png", alt: "alttext", class:"decoration-for-navbar" %>
 
-        <div class="header-home-page">
-          <h1>Remembex</h1>
-          <div class="select-a-text">
-          <h3><strong>Select a text</strong></h3>
+  <div class="navbar-home-page">
+
+    <div class="border-bottom-bg-color">
+
+
+
+           <%= image_tag "questionpink.png", alt: "alttext", class:"decoration-for-navbar"%>
+
+
+
+
+          <div class="header-home-page">
+            <h1>Remembex</h1>
+            <div class="select-a-text">
+            <h3><strong>Select a text</strong></h3>
+            </div>
           </div>
-        </div>
 
-        <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/cveneziani">
-
-
-  </div>
-  </div>
-
+          <img class="avatar-large" alt="avatar-large" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/cveneziani">
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">My profile</a>
+            <a class="dropdown-item" href="#">Log out</a>
+          </div>
+      </div>
+    </div>
 
 
 
@@ -29,26 +50,31 @@
 
     <div class="full-card">
       <div class="blue-stuff">
-        <%= image_tag "icons8-innovation-100.png", class: "decoration-for-side-bar", alt: "icon" %>
+        <%= image_tag "bulb.png", class: "decoration-for-side-bar", alt: "icon" %>
       </div>
 
       <div class="white-stuff">
+        <div class="title_of_text_container">
+        <h5 class="text-card-title"><%= link_to full_text.title[0..50], full_text_text_paragraphs_path(full_text)%></h5>
+        </div>
 
-        <h5 class="text-card-title"><%= link_to full_text.title[0..11], full_text_text_paragraphs_path(full_text)%></h5>
 
-        <p class="text-card-briefly"><%= full_text.text_paragraphs.first.content[0..150]%>...</p>
 
         <%= link_to full_text_path(full_text), method: :delete, class:"btn-delete-text" do %>
-        <%= image_tag "https://img.icons8.com/dusk/64/000000/waste.png" %>
+        <%= image_tag "trash.png" %>
         <% end %>
 
         <%= link_to full_text_path(full_text), class:"btn-read-all-text" do %>
-        <%= image_tag "https://img.icons8.com/dusk/64/000000/document.png" %>
+        <%= image_tag "clipboard.png" %>
         <% end %>
 
-        <%= link_to full_text_path(full_text), class:"btn-mark-as-done-text" do %>
-        <%= image_tag "https://img.icons8.com/dusk/64/000000/ok.png" %>
-        <% end %>
+        <div>
+          <%= image_tag "passed.png", alt: "passed", class: "btn-passed-text" %>
+
+          <%= image_tag "unpassed.png", alt: "unpassed", class: "btn-not-passed-text" %>
+
+        </div>
+
 
         <h4 class="procent-of-text"> 100% </h4>
       </div>
@@ -56,14 +82,12 @@
      <br>
      <br>
 
-    </div>
-  <% end %>
 
+  <% end %>
+</div>
   <%= link_to new_full_text_path, class: "btn btn-add-new-text" do %>
     <p>+</p>
   <% end %>
-
-
 
 
 
