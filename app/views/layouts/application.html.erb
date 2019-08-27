@@ -12,7 +12,7 @@
   </head>
   <body>
     <%= render 'shared/flashes' %>
-    <% if (action_name == "show" && controller_name == "text_paragraphs") || (action_name == "show" && controller_name == "game_sessions") %>
+    <% if (action_name == "show" && controller_name == "text_paragraphs") || (action_name == "show" && controller_name == "game_sessions") || (action_name == "show" && controller_name == "game_two_sessions")%>
       <%= render 'shared/navbar' %>
       <%= yield %>
     <% else %>

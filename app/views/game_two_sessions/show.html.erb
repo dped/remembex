@@ -1,0 +1,38 @@
+<div class="game_session_background_container">
+  <div class="game_session_main_container">
+    <div class="game_session_game_container">
+      <div class="game_session_header_container">
+        <h1>Multiple Choice Game</h1>
+        <h3><%= @game_two_session.text_paragraph.full_text.title %></h3>
+      </div>
+      <%= form_tag(update_game_two_session_path, method: :post, id: "insert_word_game_form", data: { game_two_session_id: @game_two_session.id }) do %>
+        <p>
+          <% count = 1 %>
+          <% @chopped_paragraph.each do |section| %>
+            <% if section.is_a? Hash %>
+                <%= select_tag 'word options', options_for_select([@chopped_only_text.sample,@chopped_only_text.sample,@chopped_only_text.sample,section[:secret_word]].shuffle), prompt: '____', data: { answer: section[:secret_word] } %>
+              <% count += 1 %>
+            <% else %>
+              <%= section %>
+            <% end %>
+          <% end %>
+        </p>
+      <% end %>
+      <div class="game1_popup_window_background">
+        <div id="game1_popup_window">
+          <h1>Great try!</h1>
+          <h3></h3>
+          <%= link_to create_game_two_session_path(@game_two_session.text_paragraph), method: :post, class:"btn_retry_game_popup" do %>
+              <i class="fas fa-undo-alt"></i>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <%= link_to create_game_two_session_path(@game_two_session.text_paragraph), method: :post, class:"btn_retry_game" do %>
+      <i class="fas fa-undo-alt"></i>
+    <% end %>
+  </div>
+</div>
+
+      <%= javascript_pack_tag 'multiple_choice_game' %>
+      <%= javascript_pack_tag 'finished_game_popup' %>
