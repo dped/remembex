@@ -1,6 +1,10 @@
+function checkForm() {
+  var inputs = document.querySelectorAll('.insert_word_input');
+  return inputs.length === 0;
+}
+
 const form = document.getElementById("insert_word_game_form");
 const gameSessionId = form.dataset.gameSessionId;
-console.log(gameSessionId);
 const inputs = document.querySelectorAll('input');
 
 inputs.forEach((input) => {
@@ -22,14 +26,25 @@ inputs.forEach((input) => {
       .then( data => {
         if (data.success) {
           const wrapper = document.createElement('span');
-          wrapper.classList.add('right-answer-input')
-          wrapper.innerHTML = answer
+          wrapper.classList.add('right-answer-input');
+          wrapper.innerHTML = answer;
           input.replaceWith(wrapper);
+          console.log("correct");
         } else {
           const wrapper = document.createElement('span');
-          wrapper.classList.add('wrong-answer-input')
-          wrapper.innerHTML = answer
+          wrapper.classList.add('wrong-answer-input');
+          wrapper.innerHTML = answer;
           input.replaceWith(wrapper);
+        }
+        if (checkForm()) {
+          fetch(`/game_sessions/${gameSessionId}/final_score`)
+          .then( response => response.json())
+          .then( data => {
+          let finalScore = document.querySelector("#game1_popup_window h3");
+          finalScore.innerHTML = `You had ${data.finalScore} out of ${data.inputs}`;
+          });
+          $('#game1_popup_window').slideToggle("slow");
+          $('.game1_popup_window_background').slideToggle("slow");
         }
       })
   });

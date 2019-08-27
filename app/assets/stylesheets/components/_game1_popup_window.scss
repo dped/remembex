@@ -1,0 +1,39 @@
+#game1_popup_window {
+  height: 400px;
+  width: 800px;
+  background-color: #3498db;
+  // opacity: 0.8;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+  left: 111px;
+  margin-bottom: 510px;
+  h1 {
+    font-size: 85px;
+    padding-bottom: 110px;
+    padding-top: 20px;
+  }
+  h3 {
+    font-size: 45px;
+  }
+}
+
+.game1_popup_window_background {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+

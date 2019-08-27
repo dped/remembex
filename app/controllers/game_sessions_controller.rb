@@ -28,13 +28,23 @@ class GameSessionsController < ApplicationController
 
   def guess_word
     @game_session = GameSession.find(params[:id])
-    @game_session.save
     if params[:guess].downcase == params[:answer].downcase
       @game_session.number_of_right_inputs += 1
+      @game_session.save!
       render json: {success: true}
     else
       render json: {success: false}
     end
+  end
+
+  def final_score
+    @game_session = GameSession.find(params[:id])
+    render json: { finalScore: @game_session.number_of_right_inputs, inputs: @game_session.number_of_inputs}
+  end
+
+  def input_count
+    @game_session = GameSession.find(params[:id])
+    render json: {inputCount: @game_session.number_of_inputs}
   end
 
   # def insert_word_game(words)
