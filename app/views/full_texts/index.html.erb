@@ -40,10 +40,6 @@
             <a class="dropdown-item" href="#">My profile</a>
             <a class="dropdown-item" href="#">Log out</a>
           </div>
-
-
-
-
       </div>
     </div>
 
@@ -68,17 +64,17 @@
 
 
         <%= link_to full_text_path(full_text), method: :delete, class:"btn-delete-text" do %>
-        <%= image_tag "trash.png" %>
+        <%= image_tag "trash.png", height: 45, width: 45 %>
         <% end %>
 
         <%= link_to full_text_path(full_text), class:"btn-read-all-text" do %>
-        <%= image_tag "clipboard.png" %>
+        <%= image_tag "clipboard.png", height: 45, width: 45  %>
         <% end %>
 
         <div>
-          <%= image_tag "passed.png", alt: "passed", class: "btn-passed-text" %>
+          <%= image_tag "passed.png",height: 45, width: 45  , alt: "passed", class: "btn-passed-text" %>
 
-          <%= image_tag "unpassed.png", alt: "unpassed", class: "btn-not-passed-text" %>
+          <%= image_tag "unpassed.png",height: 45, width: 45,alt: "unpassed", class: "btn-not-passed-text" %>
 
         </div>
 
