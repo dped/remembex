@@ -1,14 +1,14 @@
 #game1_popup_window {
   height: 400px;
   width: 800px;
-  background-color: #3498db;
+  background-color: #F8F9FA;
   // opacity: 0.8;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   text-align: center;
-  color: white;
-  border-radius: 10px;
+  color:  #8097B1;
+  border-radius: 16px;
   position: absolute;
   bottom: 0;
   z-index: 100;
@@ -16,11 +16,12 @@
   margin-bottom: 510px;
   h1 {
     font-size: 85px;
-    padding-bottom: 110px;
-    padding-top: 20px;
+    padding-bottom: 56px;
+    padding-top: 40px;
   }
   h3 {
     font-size: 45px;
+    color:  #8097B1;
   }
 }
 
