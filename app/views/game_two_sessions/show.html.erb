@@ -2,7 +2,7 @@
   <div class="game_session_main_container">
     <div class="game_session_game_container">
       <div class="game_session_header_container">
-        <h1>Multiple Choice Game</h1>
+        <h1>Multiple Choice</h1>
         <h3><%= @game_two_session.text_paragraph.full_text.title %></h3>
       </div>
       <%= form_tag(update_game_two_session_path, method: :post, id: "insert_word_game_form", data: { game_two_session_id: @game_two_session.id }) do %>
@@ -10,7 +10,7 @@
           <% count = 1 %>
           <% @chopped_paragraph.each do |section| %>
             <% if section.is_a? Hash %>
-                <%= select_tag 'word options', options_for_select([@chopped_only_text.sample,@chopped_only_text.sample,@chopped_only_text.sample,section[:secret_word]].shuffle), prompt: '____', data: { answer: section[:secret_word] } %>
+                <%= select_tag 'word options', options_for_select([@chopped_only_text.uniq.reject{ |k| k== section[:secret_word]}.sample(3),section[:secret_word]].flatten.shuffle), prompt: 'Pick a word!', data: { answer: section[:secret_word] } %>
               <% count += 1 %>
             <% else %>
               <%= section %>

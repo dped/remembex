@@ -10,7 +10,7 @@
   display: flex;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
    border-radius: 20px 20px 20px 20px;
-
+font-family: 'M PLUS Rounded 1c', sans-serif;
 
   .decoration-for-side-bar {
     position: absolute;
@@ -36,6 +36,7 @@
     width: 537px;
     height: 210px;
     border-radius: 0px 20px 20px 0px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
 
 
     .text-card-title {
@@ -43,10 +44,11 @@
 
   }
    .title_of_text_container{
-    margin-top: 50px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-top: 38px;
+    margin-left: 10px;
+    margin-right: 70px;
     margin-bottom: 50px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
    }
 
     .card-full-text-blank {
@@ -94,10 +96,11 @@
 
    .procent-of-text {
     position: absolute;
-    left: -117px;
-    top: 160px;
+    left: -107px;
+    top: 145px;
 
-    font-family: 'Rammetto One', cursive;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: bolder;
     color: white;
     text-shadow: 2px 2px 4px black;
 
@@ -105,9 +108,13 @@
 
   .text-card-title {
     padding-left: 30px;
-    font-family: "Raleway", "Helvetica", "sans-serif";
+    font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 35px;
     font-weight: normal;
+
+    h5 {
+      font-family: 'M PLUS Rounded 1c', sans-serif;
+    }
 
 
 
@@ -131,9 +138,9 @@
 
 .full-card .white-stuff .text-card-title {
     padding-left: 20px;
-    font-family: 'Rammetto One', cursive;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 28px;
-    font-weight: normal;
+    font-weight: bold;
     text-decoration: none;
     a {
       color: #5F5F5F;
@@ -174,7 +181,10 @@ a.text-card-title:focus, a.text-card-title:visited, a.text-card-title:active, a.
   p {
     position: absolute;
     top: 0px;
-    left: 43px;
+    left: 34px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-weight: bolder;
+
   }
 
 
@@ -200,25 +210,31 @@ a.text-card-title:focus, a.text-card-title:visited, a.text-card-title:active, a.
 
      .header-home-page {
        h1{
-        font-family: 'Rammetto One', cursive;
-        font-size: 50px;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-size: 75px;
         text-shadow: 2px 2px 4px #000000;
+        font-weight: bolder;
        }
 
 
 
       color: white;
       position: absolute;
-      left: 213px;
-      top: 60px;
+      left: 205px;
+      top: 24px;
 
       .select-a-text {
         position: absolute;
         left: 100px;
-        top: 65px;
-        font-family: 'Rammetto One', cursive;
+        top: 95px;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+
 
         text-shadow: 2px 2px 4px #000000;
+
+        h3 {
+          font-family: 'M PLUS Rounded 1c', sans-serif;
+        }
       }
 
 
@@ -287,6 +303,11 @@ a.text-card-title:focus, a.text-card-title:visited, a.text-card-title:active, a.
 
   }
 
+
+.logo-experiments {
+  height: 64px;
+  width: 64px;
+}
 
 
 
