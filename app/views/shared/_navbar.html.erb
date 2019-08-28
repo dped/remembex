@@ -1,15 +1,15 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <% if (action_name == "show" && controller_name == "text_paragraphs") %>
     <%= link_to full_text_text_paragraphs_path(@text_paragraph.full_text), class:"btn_navbar_back" do %>
-    <%= image_tag "https://slack-imgs.com/?c=1&url=https%3A%2F%2Fimg.icons8.com%2Fdusk%2F64%2F000000%2Fundo.png", alt:"back symbol" %>
+    <%= image_tag "arrow-white.png" %>
     <% end  %>
   <% elsif (action_name == "show" && controller_name == "game_sessions") %>
     <%= link_to text_paragraph_path(@game_session.text_paragraph), class:"btn_navbar_back" do %>
-    <%= image_tag "https://slack-imgs.com/?c=1&url=https%3A%2F%2Fimg.icons8.com%2Fdusk%2F64%2F000000%2Fundo.png", alt:"back symbol" %>
+    <%= image_tag "arrow-white.png" %>
     <% end  %>
     <% else (action_name == "show" && controller_name == "game_two_sessions") %>
     <%= link_to text_paragraph_path(@game_two_session.text_paragraph), class:"btn_navbar_back" do %>
-    <%= image_tag "https://slack-imgs.com/?c=1&url=https%3A%2F%2Fimg.icons8.com%2Fdusk%2F64%2F000000%2Fundo.png", alt:"back symbol" %>
+    <%= image_tag "arrow-white.png" %>
     <% end  %>
   <% end %>
 
