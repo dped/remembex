@@ -7,12 +7,12 @@ function checkForm() {
   return inputs.length === 0;
 }
 
-const form = document.getElementById("insert_word_game_form");
+const form = document.getElementById("insert_word_game_two_form");
 const gameTwoSessionId = form.dataset.gameTwoSessionId;
 const inputs = document.querySelectorAll('#word_options');
-const punctuation = document.querySelectorAll('.game_session_background_container p')
-//When loaded, add active class on the first select tag
-console.log(punctuation)
+// const punctuation = document.querySelectorAll('.game_session_background_container p')
+// //When loaded, add active class on the first select tag
+// console.log(punctuation)
 
 // Whenever the user uses the select box
 inputs.forEach((input) => {
