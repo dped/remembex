@@ -10,7 +10,7 @@ puts "creating 1 user"
 abraham_lincoln = User.new(username: "abraham Lincoln",
   email: "abraham@gmail.com",
   password: "123456",
-  avatar: "https://www.doi.gov/sites/doi.gov/files/styles/featured_image__full_width/public/blog-post/primary-images/abraham_lincoln_loc_photo.jpg?itok=FlNGwvbr")
+  avatar: "https://static1.squarespace.com/static/592738c58419c2fe84fbdb81/t/5a894dbe24a694d707c028b7/1518948008812/DwayneBrownStudio_Tamara_Student_LinkedIn_Portraits.jpg")
 
 abraham_lincoln.save!
 
