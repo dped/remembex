@@ -1,0 +1,19 @@
+.game_session_background_container{
+  .active {
+    border: 3px;
+    border-color: #1abc9c;
+    box-shadow: 3px 3px 1px 1px #1abc9c;
+  }
+  p {
+    color: transparent;
+  }
+}
+
+#word_options {
+  color: transparent;
+  font-size: 16px;
+  &.active {
+    color: black;
+    font-size: 42px;
+  }
+}
