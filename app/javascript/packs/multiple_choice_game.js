@@ -4,18 +4,19 @@ function checkForm() {
 }
 
 const form = document.getElementById("insert_word_game_form");
-const gameSessionId = form.dataset.gameSessionId;
+const gameTwoSessionId = form.dataset.gameTwoSessionId;
+console.log(gameTwoSessionId);
 const inputs = document.querySelectorAll('input');
 
 inputs.forEach((input) => {
-  input.addEventListener('blur', (event) => {
+  input.addEventListener('click', (event) => {
     const guess = event.currentTarget.value;
     const answer = event.currentTarget.dataset.answer;
     const requestBody = {
       guess: guess,
       answer: answer
     }
-    fetch(`/game_sessions/${gameSessionId}/guess_word`, {
+    fetch(`/game_two_sessions/${gameTwoSessionId}/guess_word`, {
       headers: {
         'Content-Type': 'application/json',
       },
@@ -37,7 +38,7 @@ inputs.forEach((input) => {
           input.replaceWith(wrapper);
         }
         if (checkForm()) {
-          fetch(`/game_sessions/${gameSessionId}/final_score`)
+          fetch(`/game_two_sessions/${gameTwoSessionId}/final_score`)
           .then( response => response.json())
           .then( data => {
           let finalScore = document.querySelector("#game1_popup_window h3");
@@ -49,24 +50,3 @@ inputs.forEach((input) => {
       })
   });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

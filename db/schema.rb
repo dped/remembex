@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_22_131446) do
+ActiveRecord::Schema.define(version: 2019_08_27_074807) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,17 @@ ActiveRecord::Schema.define(version: 2019_08_22_131446) do
     t.datetime "updated_at", null: false
     t.index ["game_id"], name: "index_game_sessions_on_game_id"
     t.index ["text_paragraph_id"], name: "index_game_sessions_on_text_paragraph_id"
+  end
+
+  create_table "game_two_sessions", force: :cascade do |t|
+    t.integer "number_of_inputs"
+    t.integer "number_of_right_inputs"
+    t.bigint "text_paragraph_id"
+    t.bigint "game_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["game_id"], name: "index_game_two_sessions_on_game_id"
+    t.index ["text_paragraph_id"], name: "index_game_two_sessions_on_text_paragraph_id"
   end
 
   create_table "games", force: :cascade do |t|
@@ -68,5 +79,7 @@ ActiveRecord::Schema.define(version: 2019_08_22_131446) do
   add_foreign_key "full_texts", "users"
   add_foreign_key "game_sessions", "games"
   add_foreign_key "game_sessions", "text_paragraphs"
+  add_foreign_key "game_two_sessions", "games"
+  add_foreign_key "game_two_sessions", "text_paragraphs"
   add_foreign_key "text_paragraphs", "full_texts"
 end
