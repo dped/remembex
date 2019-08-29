@@ -1,8 +1,8 @@
+GameSession.destroy_all
+GameTwoSession.destroy_all
 User.destroy_all
 TextParagraph.destroy_all
 FullText.destroy_all
-GameSession.destroy_all
-GameTwoSession.destroy_all
 Game.destroy_all
 
 puts "creating 1 user"

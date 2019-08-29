@@ -7,17 +7,23 @@
       </div>
       <%= form_tag(update_game_two_session_path, method: :post, id: "insert_word_game_two_form", data: { game_two_session_id: @game_two_session.id }) do %>
         <p>
-          <% count = 1 %>
           <% @chopped_paragraph.each do |section| %>
             <% if section.is_a? Hash %>
-                <%= select_tag 'word options', options_for_select([@chopped_only_text.uniq.reject{ |k| k== section[:secret_word]}.sample(3),section[:secret_word]].flatten.shuffle), prompt: 'Pick a word!', data: { answer: section[:secret_word] } %>
-              <% count += 1 %>
+              <span id='word_options' class="insert_word_input text-center" data-answer=<%= section[:secret_word] %>>
+                <span class="user-options-container d-none">
+                  <span class='user-options'><%= section[:secret_word] %></span>
+                  <% @chopped_only_text.uniq.reject{ |k| k== section[:secret_word]}.sample(3).each do |option| %>
+                    <span class='user-options'><%= option %></span>
+                  <% end %>
+                </span>
+              </span>
             <% else %>
-              <%= section %>
+              <span class="punctuation"><%= section %></span>
             <% end %>
           <% end %>
         </p>
       <% end %>
+
       <div class="game1_popup_window_background">
         <div id="game1_popup_window">
           <h1>Great try!</h1>
@@ -36,3 +42,6 @@
 
       <%= javascript_pack_tag 'multiple_choice_game' %>
       <%= javascript_pack_tag 'finished_game_popup' %>
+
+
+
