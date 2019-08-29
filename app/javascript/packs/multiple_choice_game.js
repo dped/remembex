@@ -52,7 +52,9 @@ user_options.forEach((option) => {
       now.classList.remove('active')
       console.log('not last one')
     }
-    now.nextElementSibling.classList.add('show_punctuation')
+    now.nextElementSibling.classList.add('show_punctuation');
+    // const showPunctuation = document.querySelectorAll('.user-options-container')
+    // showPunctuation.nextElementSibling.classList.add('show_punctuation')
     now.innerHTML = option.innerHTML;
     console.log('changed');
     console.log(now);
@@ -64,8 +66,11 @@ user_options.forEach((option) => {
       guess: guess,
       answer: answer
     }
-    const userOptionsContainer = document.querySelector('.user-options-container')
+    console.log("Request Body:")
+    console.log(requestBody)
+    const userOptionsContainer = document.querySelector('.d-none')
     if (userOptionsContainer) {
+
       userOptionsContainer.classList.remove('d-none')
     }
     // Make the next one active, and the now one inactive
@@ -78,6 +83,8 @@ user_options.forEach((option) => {
     })
       .then( response => response.json())
       .then( data => {
+        console.log("Data back from fetch request")
+        console.log(data)
         if (data.success) {
           const wrapper = document.createElement('span');
           wrapper.classList.add('right-answer-input');
@@ -90,6 +97,12 @@ user_options.forEach((option) => {
           wrapper.innerHTML = answer;
           now.replaceWith(wrapper);
         }
+        const optionsContainer = document.getElementById("options-container");
+        let counter = 1;
+        next.dataset.options.split(";").forEach((optionWord) => {
+          document.getElementById(`option-${counter}`).innerHTML = optionWord;
+          counter += 1;
+        })
         if (checkForm()) {
           fetch(`/game_two_sessions/${gameTwoSessionId}/final_score`)
           .then( response => response.json())
