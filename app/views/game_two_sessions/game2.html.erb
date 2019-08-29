@@ -1,0 +1,1 @@
+                <%= select_tag 'word options', options_for_select([@chopped_only_text.uniq.reject{ |k| k== section[:secret_word]}.sample(3),section[:secret_word]].flatten.shuffle), prompt: 'Pick a word!', data: { answer: section[:secret_word] } %>
