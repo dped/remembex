@@ -11,14 +11,13 @@
         </div>
         <%= image_tag current_user.avatar, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false, height: 120, width: 120, crop: :fill, gravity: :face %>
       </div>
-      <p class="lead text-center mb-5" style="color: #5151CC; font-size: 28px;">Title: <%= @full_text.title %></p>
+      <p class="lead text-center mb-5" style="color: #5151CC; font-size: 28px;"><%= @full_text.title %></p>
     </div>
   </div>
     <div class="mb-3"></div>
   <div class="container pb-5">
     <div class="row">
       <div class="col-12">
-        <h3 class="text-center mt-5 user-command" style="color: black;">Select Text Card!</h3>
         <% @text_paragraphs.each do |paragraph| %>
           <div class="text-card-solid-border">
             <p class="text-content"><%= paragraph.content %></p>
