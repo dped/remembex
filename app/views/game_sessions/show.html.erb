@@ -24,15 +24,17 @@
         <div id="game1_popup_window">
           <h1>Great try!</h1>
           <h3></h3>
-          <%= link_to create_game_session_path(@game_session.text_paragraph), method: :post, class:"btn_retry_game_popup" do %>
-              <i class="fas fa-undo-alt"></i>
-          <% end %>
+          <div class="btn_retry_game_popup" id="game_one_retry_button_popup"><i class="fas fa-times"></i></div>
         </div>
       </div>
     </div>
-    <%= link_to create_game_session_path(@game_session.text_paragraph), method: :post, class:"btn_retry_game" do %>
+    <%= link_to create_game_session_path(@game_session.text_paragraph), method: :post, class:"btn_retry_game-one" do %>
       <i class="fas fa-undo-alt"></i>
     <% end %>
+
+     <%= link_to "Go to game 2!", create_game_two_session_path(@game_session.text_paragraph), method: :post, class:"blue-btn-on-game1-page" %>
+
+
   </div>
 </div>
 

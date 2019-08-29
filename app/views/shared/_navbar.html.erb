@@ -4,7 +4,7 @@
     <%= image_tag "arrow-white.png" %>
     <% end  %>
   <% elsif (action_name == "show" && controller_name == "game_sessions") %>
-    <%= link_to text_paragraph_path(@game_session.text_paragraph), class:"btn_navbar_back" do %>
+    <%= link_to full_text_text_paragraphs_path(@game_session.text_paragraph.full_text), class:"btn_navbar_back" do %>
     <%= image_tag "arrow-white.png" %>
     <% end  %>
     <% else (action_name == "show" && controller_name == "game_two_sessions") %>
