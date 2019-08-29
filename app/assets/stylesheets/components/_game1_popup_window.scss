@@ -1,5 +1,5 @@
 #game1_popup_window {
-  height: 400px;
+  height: 260px;
   width: 600px;
   background-color: #F8F9FA;
   // opacity: 0.8;
@@ -15,12 +15,12 @@
   left: 84px;
   margin-bottom: 480px;
   h1 {
-    font-size: 85px;
+    font-size: 48px;
     padding-bottom: 56px;
     padding-top: 40px;
   }
   h3 {
-    font-size: 45px;
+    font-size: 32px;
     color:  #8097B1;
   }
 }
@@ -30,7 +30,7 @@
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   left: 0;
-  top: 0;
+  top: 30px;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */

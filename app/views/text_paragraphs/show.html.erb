@@ -21,9 +21,9 @@
       type="button" value="Play">Resume</button> -->
 
       <a href="#" id="voice-btn" data-content="<%= @text_paragraph.content %>" data-state="initial" class="btn_listen"><i class="fas fa-play"></i></a>
+      <%= link_to "Go to game 1!", create_game_session_path(@text_paragraph), method: :post, class:"btn_play_game" %>
+      <%= link_to "Go to game 2!", create_game_two_session_path(@text_paragraph), method: :post, class:"btn_play_game2" %>
     </div>
-    <%= link_to "Go to game 1!", create_game_session_path(@text_paragraph), method: :post, class:"btn_play_game" %>
-    <%= link_to "Go to game 2!", create_game_two_session_path(@text_paragraph), method: :post, class:"btn_play_game2" %>
   </div>
 </div>
 
