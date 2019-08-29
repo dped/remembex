@@ -1,5 +1,6 @@
 .everything {
   position: relative;
+  background-color: #dff7f9;
 }
 
 
@@ -225,9 +226,10 @@ a.text-card-title:focus, a.text-card-title:visited, a.text-card-title:active, a.
 
       .select-a-text {
         position: absolute;
-        left: 100px;
-        top: 95px;
+        left: -23px;
+        top: 101px;
         font-family: 'M PLUS Rounded 1c', sans-serif;
+        width: 500px;
 
 
         text-shadow: 2px 2px 4px #000000;
@@ -310,6 +312,19 @@ a.text-card-title:focus, a.text-card-title:visited, a.text-card-title:active, a.
 }
 
 
-
+.what_to_do_here {
+    padding-left: 110px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #5F5F5F;
+    h3 {
+      font-family: 'M PLUS Rounded 1c', sans-serif;
+      font-size: 35px;
+    }
+}
 
 
