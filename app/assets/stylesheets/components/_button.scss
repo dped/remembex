@@ -185,13 +185,14 @@ a.btn_retry_game_popup:focus, a.btn_retry_game_popup:visited, a.btn_retry_game_p
   z-index: 100;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
 }
+
 .btn_retry_game_popup-game-1 {
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
   bottom: -80px !important;
-  right : 715px;
+  right : 515px;
   font-size: 85px;
   line-height: 36px;
   color: white;
