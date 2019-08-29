@@ -58,18 +58,18 @@ a.btn_play_game:focus, a.btn_play_game:visited, a.btn_play_game:active, a.btn_pl
 
 .btn_play_game {
   position: relative;
-  top: -135px;
-  left: 500px;
-  font-size: 35px;
+  top: -150px;
+  left: 360px;
+  font-size: 32px;
   line-height: 36px;
   color: white;
   padding: 44px 14px;
-  background: #1abc9c;
+  background: #a29bfe;
   bottom: 0;
   flex-grow: 1;
   text-align: center;
-  height: 170px;
-  width: 170px;
+  height: 154px;
+  width: 154px;
   border-radius: 50%;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
   z-index: 1000;
@@ -83,17 +83,35 @@ a.btn_play_game2:focus, a.btn_play_game2:visited, a.btn_play_game2:active, a.btn
 .btn_play_game2 {
   position: relative;
   top: -306px;
-  left: 768px;
-  font-size: 35px;
+  left: 580px;
+  font-size: 32px;
   line-height: 36px;
   color: white;
   padding: 44px 14px;
-  background: #1abc9c;
+  background: #F79F1F;
   bottom: 0;
   flex-grow: 1;
   text-align: center;
-  height: 170px;
-  width: 170px;
+  height: 154px;
+  width: 154px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
+  z-index: 1000;
+}
+.blue-btn-on-game1-page {
+  position: relative;
+  top: -77px;
+  left: 580px;
+  font-size: 32px;
+  line-height: 36px;
+  color: white;
+  padding: 44px 14px;
+  background: #0055FF;
+  bottom: 0;
+  flex-grow: 1;
+  text-align: center;
+  height: 154px;
+  width: 154px;
   border-radius: 50%;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
   z-index: 1000;
@@ -123,6 +141,25 @@ a.btn_retry_game:focus, a.btn_retry_game:visited, a.btn_retry_game:active, a.btn
   z-index: 100;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
 }
+.btn_retry_game-one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 78px !important;
+  right : 200px;
+  font-size: 85px;
+  line-height: 36px;
+  color: white;
+  background:  #33CCCC;
+  flex-grow: 1;
+  text-align: center;
+  height: 154px;
+  width: 154px;
+  border-radius: 50%;
+  z-index: 100;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
+}
 
 a.btn_retry_game_popup:focus, a.btn_retry_game_popup:visited, a.btn_retry_game_popup:active, a.btn_retry_game_popup:hover {
   text-decoration: none;
@@ -130,6 +167,25 @@ a.btn_retry_game_popup:focus, a.btn_retry_game_popup:visited, a.btn_retry_game_p
 }
 
 .btn_retry_game_popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -80px !important;
+  right : 715px;
+  font-size: 85px;
+  line-height: 36px;
+  color: white;
+  background: #A020F0;
+  flex-grow: 1;
+  text-align: center;
+  height: 170px;
+  width: 170px;
+  border-radius: 50%;
+  z-index: 100;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
+}
+.btn_retry_game_popup-game-1 {
   display: flex;
   justify-content: center;
   align-items: center;

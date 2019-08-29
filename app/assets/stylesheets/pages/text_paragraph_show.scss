@@ -9,36 +9,37 @@
 
 .text_paragraph_show_container {
   text-align: center;
-  width: 70vw;
+  width: 88vw;
   background-color: white;
   opacity: 0.8;
   padding: 10px 10px;
   border-radius: 10px;
   margin: 0 auto;
-  margin-top: 130px;
+  margin-top: 180px;
   overflow: scroll;
   position: relative;
   margin-bottom: 50px;
 }
 
 .text_paragraph_show_title {
-  padding-top: 30px;
+  padding-top: 40px;
   font-size: 80px;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
   text-align: center;
 }
-
-
+.user-command {
+  color: #963BEE;
+}
 .text_paragraph_show_text {
   text-align: left;
-  font-size: 42px;
-  padding: 35px 50px 100px 50px;
+  font-size: 36px;
+  padding: 35px 50px 144px 50px;
 }
 
 .text_paragraph_background_container {
   position: relative;
   background-image: url("https://images.unsplash.com/photo-1506252374453-ef5237291d83?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80");
-  background-image: linear-gradient(to right, rgba(52,152,219,0.7), rgba(52,152,219,0.8));
+  background-image: linear-gradient(to right, rgba(51,204,204,0.7), rgba(52,152,219,0.8));
   background-position: center;
   background-size: cover;
   top: 0;

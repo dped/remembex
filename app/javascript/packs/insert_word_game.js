@@ -51,10 +51,10 @@ inputs.forEach((input) => {
 });
 
 
-
-
-
-
+$("#game_one_retry_button_popup").click(function() {
+  $('#game1_popup_window').css('display', 'none');
+  $('.game1_popup_window_background').css('display', 'none');
+})
 
 
 
