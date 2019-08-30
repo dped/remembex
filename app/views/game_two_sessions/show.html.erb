@@ -1,7 +1,7 @@
 <div class="game_two_session_background_container">
   <div class="game_session_main_container">
     <div class="game_session_game_container">
-      <div class="game_session_header_container">
+      <div class="game_two_session_header_container">
         <h1>Multiple Choice</h1>
         <h3><%= @game_two_session.text_paragraph.full_text.title %></h3>
       </div>
@@ -39,9 +39,6 @@
         </div>
       </div>
     </div>
-    <%= link_to create_game_two_session_path(@game_two_session.text_paragraph), method: :post, class:"btn_retry_game" do %>
-      <i class="fas fa-undo-alt"></i>
-    <% end %>
   </div>
 </div>
 

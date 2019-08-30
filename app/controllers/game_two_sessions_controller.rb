@@ -4,7 +4,7 @@ class GameTwoSessionsController < ApplicationController
     @game_two_session = GameTwoSession.find(params[:id])
     @chopped_paragraph = @game_two_session.chop_paragraph
     @chopped_only_text = []
-    @chopped_paragraph.each{|text| @chopped_only_text << text[:secret_word] if text.class ==Hash }
+    @chopped_paragraph.each{|text| @chopped_only_text << text[:secret_word] if text.class == Hash }
     input_count = @chopped_paragraph.count { |element| element.is_a? Hash }
     @game_two_session.number_of_inputs = input_count
     @game_two_session.number_of_right_inputs = 0

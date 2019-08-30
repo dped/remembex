@@ -99,11 +99,14 @@ user_options.forEach((option) => {
         }
         const optionsContainer = document.getElementById("options-container");
         let counter = 1;
-        next.dataset.options.split(";").forEach((optionWord) => {
-          document.getElementById(`option-${counter}`).innerHTML = optionWord;
-          counter += 1;
-        })
-        if (checkForm()) {
+        if (next) {
+          next.dataset.options.split(";").forEach((optionWord) => {
+            document.getElementById(`option-${counter}`).innerHTML = optionWord;
+            counter += 1;
+          })
+        }
+        else
+        {
           fetch(`/game_two_sessions/${gameTwoSessionId}/final_score`)
           .then( response => response.json())
           .then( data => {
@@ -113,6 +116,7 @@ user_options.forEach((option) => {
           $('#game1_popup_window').slideToggle("slow");
           $('.game1_popup_window_background').slideToggle("slow");
         }
+
       })
   })
 });
