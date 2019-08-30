@@ -1,4 +1,3 @@
-require 'pry-byebug'
 class GameTwoSession < ApplicationRecord
   belongs_to :text_paragraph
   belongs_to :game
