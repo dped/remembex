@@ -49,6 +49,9 @@ a.btn_play_game:focus, a.btn_play_game:visited, a.btn_play_game:active, a.btn_pl
   border-radius: 50%;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
   z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 a.btn_play_game2:focus, a.btn_play_game2:visited, a.btn_play_game2:active, a.btn_play_game2:hover {
@@ -83,6 +86,9 @@ a.blue-btn-on-game1-page:focus, a.blue-btn-on-game1-page:visited, a.blue-btn-on-
 }
 
 .blue-btn-on-game1-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   top: -70px;
   left: 600px;
